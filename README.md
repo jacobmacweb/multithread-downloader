@@ -8,7 +8,12 @@ py -m pip install -r requirements.txt
 py -m pip install -r requirements-build.txt
 ```
 
-And then run `compile.bat`, or copy the contents of the file and run it in your console. The file is there for simplicity, and nothing more.
+Then run
+```
+pyinstaller --onefile interface.py --additional-hooks-dir=hooks --noconsole
+```
+
+(Or run `compile.bat`, which executes the same `pyinstaller` command as written above.)
 
 ## Running without building
 Simply run
